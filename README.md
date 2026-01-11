@@ -19,7 +19,7 @@ This project is developed as part of an academic assignment and follows industry
 
 ---
 
-## 🧠 Part 1: Disease Classification (Completed ✅)
+## 🧠 Part 1: Disease Classification (✅)
 
 ### 🔹 Dataset
 - Medical text dataset with disease labels  
@@ -43,7 +43,7 @@ json
   "predicted_disease": "urinary tract infection"
 }
   
-## 🤖****Part 2: Medical Question Answering (RAG) (In Progress 🚧)****
+## 🤖****Part 2: Medical Question Answering (RAG) (🚧)****
 
 Uses document retrieval + LLM-based generation
 Allows users to ask general medical questions
@@ -53,7 +53,34 @@ FAISS vector store
 Transformer-based embeddings
 HuggingFace pipelines
 
-⚠️ Part 2 will be finalized and integrated separately.
+### Language Model
+* HuggingFace google/flan-t5-base
+* Used for answer generation based on retrieved context
+
+### 🚀 FastAPI Endpoint – Query API
+🔹 Endpoint
+POST /query
+
+🔹 Request Body
+{
+  "question": "What medicines are used for asthma?"
+}
+
+🔹 Response Format
+{
+  "question": "What medicines are used for asthma?",
+  "answer": "Asthma is commonly treated using inhaled corticosteroids and bronchodilators.",
+  "sources": [
+    { "source": "NIH - Asthma Medications" },
+    { "source": "WikiDoc - Asthma" }
+  ]
+}
+
+### 📊 Output Explanation
+
+* question: User medical query
+* answer: Generated response using retrieved medical context
+* sources: Documents used to generate the answer (for transparency)
 
 ## 🎁 Bonus Task Implemented
 * ✅ Model Explainability using LIME
@@ -143,6 +170,7 @@ Request Body
 
 
 ---
+
 
 
 
