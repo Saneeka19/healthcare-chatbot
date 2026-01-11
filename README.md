@@ -155,7 +155,6 @@ Request Body
 * Environment setup for RAG components
 
 ### 🔮 Future Improvements
-* Complete Part 2 RAG implementation
 * Fine-tune BioBERT for medical QA
 * Add frontend UI using Streamlit
 * Deploy on cloud (AWS / Azure)
@@ -170,6 +169,7 @@ Request Body
 
 
 ---
+
 
 
 
