@@ -82,6 +82,9 @@ POST /query
 * answer: Generated response using retrieved medical context
 * sources: Documents used to generate the answer (for transparency)
 
+### 🧠 Evaluation Note
+The presence of multiple sources does not indicate incorrect predictions. It reflects embedding-level similarity rather than strict keyword matching.
+
 ## 🎁 Bonus Task Implemented
 * ✅ Model Explainability using LIME
 * Local Interpretable Model-agnostic Explanations (LIME)
@@ -169,6 +172,7 @@ Request Body
 
 
 ---
+
 
 
 
